@@ -57,7 +57,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 	var frequency = childSnapshot.val().newFrequency;
 
 	// Calc time til next train
-	var minutesAway = "";
+	var minutesAway = frequency;
 	
 	// Add all the stuff to the table
 	$("#trainTable > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + firstTrain + "</td><td>" + frequency + "</td><td>" + minutesAway + "</td>");
